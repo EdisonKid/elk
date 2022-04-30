@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.elk.elkweb.mapper.FrontMapper" >
+  <resultMap id="BaseResultMap" type="com.elk.elkweb.entity.FrontCardDPMInfo" >
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="COUNTS" property="counts" jdbcType="DECIMAL" />
+    <result column="PLACECOUNT" property="placecount" jdbcType="DECIMAL" />
+    <result column="CQ" property="cq" jdbcType="DECIMAL" />
+    <result column="JB" property="jb" jdbcType="DECIMAL" />
+    <result column="ZS" property="zs" jdbcType="DECIMAL" />
+    <result column="TIME" property="time" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <insert id="insert" parameterType="com.elk.elkweb.entity.FrontCardDPMInfo" >
+    insert into DOOR_INFO_FOR_DEPARTMENT (NAME, COUNTS, PLACECOUNT, 
+      CQ, JB, ZS, TIME
+      )
+    values (#{name,jdbcType=VARCHAR}, #{counts,jdbcType=DECIMAL}, #{placecount,jdbcType=DECIMAL}, 
+      #{cq,jdbcType=DECIMAL}, #{jb,jdbcType=DECIMAL}, #{zs,jdbcType=DECIMAL}, #{time,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.elk.elkweb.entity.FrontCardDPMInfo" >
+    insert into DOOR_INFO_FOR_DEPARTMENT
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="name != null" >
+        NAME,
+      </if>
+      <if test="counts != null" >
+        COUNTS,
+      </if>
+      <if test="placecount != null" >
+        PLACECOUNT,
+      </if>
+      <if test="cq != null" >
+        CQ,
+      </if>
+      <if test="jb != null" >
+        JB,
+      </if>
+      <if test="zs != null" >
+        ZS,
+      </if>
+      <if test="time != null" >
+        TIME,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="counts != null" >
+        #{counts,jdbcType=DECIMAL},
+      </if>
+      <if test="placecount != null" >
+        #{placecount,jdbcType=DECIMAL},
+      </if>
+      <if test="cq != null" >
+        #{cq,jdbcType=DECIMAL},
+      </if>
+      <if test="jb != null" >
+        #{jb,jdbcType=DECIMAL},
+      </if>
+      <if test="zs != null" >
+        #{zs,jdbcType=DECIMAL},
+      </if>
+      <if test="time != null" >
+        #{time,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <!--  ————首页相关查询 begin————  -->
+  <!--  全院刷卡信息查询  -->
+  <select id="getCardDPMInfo" resultType="map">
+    select name,cq,zs,jb
+    from(
+          select * from DOOR_INFO_FOR_DEPARTMENT t
+          where time in (select max(time) from DOOR_INFO_FOR_DEPARTMENT)
+          order by t.counts desc
+        )
+    where rownum<![CDATA[<=]]>3
+  </select>
+  <!--  全院平均刷卡信息查询  -->
+  <select id="getCardDPMAvg" resultType="map">
+    select avg(cq)as avgCQ,avg(zs)as avgZS,avg(jb)as avgJB
+    from(
+          select * from DOOR_INFO_FOR_DEPARTMENT t
+          where time in (select max(time) from DOOR_INFO_FOR_DEPARTMENT)
+          order by t.counts desc
+        )
+  </select>
+  <!--  服务器平均负载查询  -->
+  <select id="getServerStateAvg" resultType="map">
+    select * from FR_SERVER_AVG t
+    where time in (select max(time) from FR_SERVER_AVG)
+  </select>
+  <!--  IPMI告警台数  -->
+  <select id="getIPMIAlertNum" resultType="java.lang.Integer">
+    select count(distinct ip) from IPMI_LOG_WARN t where time <![CDATA[>=]]>to_date(#{time},'yyyy-MM-dd hh24:mi:ss')
+  </select>
+  <!--  平均任务数  -->
+  <select id="getTaskAvg" resultType="java.lang.Float">
+    select round( t1.fenzi/t2.fenmu,1) as
+    from (
+        select type2+type3+type5+type10 as fenzi
+        from (
+            select sum(type2) as type2,sum(type3) as type3,sum(type5) as type5,sum(type10) as type10
+            from LOG_WIN_LOGIN
+            where time in (select max(time) from LOG_WIN_LOGIN)
+        )
+    ) t1,
+    (
+        select count(distinct ip) as fenmu
+        from LOG_WIN_LOGIN
+        where time in (select max(time) from LOG_WIN_LOGIN)
+    ) t2
+  </select>
+  <!--  agent故障数量  -->
+  <select id="getAgentNum" resultType="map">
+    select t.hosts_all,t.hosts_error from ZA_HOSTS_STATE t where time in (select max(time) from ZA_HOSTS_STATE )
+  </select>
+  <!--  轮播图信息汇总  -->
+  <select id="getGetherInfo" resultType="map">
+    select * from TJ_Gether_INFO_NUM t where time in (select max(time) from TJ_Gether_INFO_NUM )
+  </select>
+
+  <!--  ————首页相关查询 end————  -->
+
+</mapper>
