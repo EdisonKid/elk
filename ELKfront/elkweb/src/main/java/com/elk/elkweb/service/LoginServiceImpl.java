@@ -16,10 +16,10 @@ public class LoginServiceImpl implements LoginService {
     private LoginMapper loginMapper;
 
     @Override
-    public boolean login(String username, String password) {
+    public boolean login(String USER_NAME, String USER_PSD) {
         boolean flag = false;
-        User user = loginMapper.login(username, password);
-        if (user !=  null)
+        User user = loginMapper.login(USER_NAME, USER_PSD);
+        if (user != null)
             flag = true;
         return flag;
     }

@@ -6,7 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="041e2759-c1fb-4b78-be1e-8cdf78d32021" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ELKfront/elkweb/elkpro/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/ELKfront/elkweb/elkpro/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ELKfront/elkweb/elkpro/src/components/login/login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/ELKfront/elkweb/elkpro/src/components/login/login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ELKfront/elkweb/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ELKfront/elkweb/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ELKfront/elkweb/src/main/java/com/elk/elkweb/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ELKfront/elkweb/src/main/java/com/elk/elkweb/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ELKfront/elkweb/src/main/java/com/elk/elkweb/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/ELKfront/elkweb/src/main/java/com/elk/elkweb/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ELKfront/elkweb/src/main/java/com/elk/elkweb/mapper/LoginMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ELKfront/elkweb/src/main/java/com/elk/elkweb/mapper/LoginMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ELKfront/elkweb/src/main/java/com/elk/elkweb/service/LoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ELKfront/elkweb/src/main/java/com/elk/elkweb/service/LoginService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ELKfront/elkweb/src/main/java/com/elk/elkweb/service/LoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ELKfront/elkweb/src/main/java/com/elk/elkweb/service/LoginServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ELKfront/elkweb/src/main/java/com/elk/elkweb/test/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ELKfront/elkweb/src/main/java/com/elk/elkweb/test/LoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ELKfront/elkweb/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ELKfront/elkweb/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ELKfront/elkweb/src/main/resources/mapper/LoginMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ELKfront/elkweb/src/main/resources/mapper/LoginMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,9 +25,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Class" />
         <option value="Interface" />
         <option value="XML File.xml " />
-        <option value="Class" />
       </list>
     </option>
   </component>
@@ -50,11 +59,19 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/ELKfront/elkweb/src/main/java/com" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../12xia/white-jotter-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ELKfront/elkweb/src/main/java/com/elk/elkweb/controller" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="Errors" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\program\workspace\workspace-idea\07ELK\ELKWeb - pagination\elk\ELKfront\elkweb\src\main\java\com\elk\elkweb\controller" />
+    </key>
   </component>
   <component name="RunManager" selected="JUnit.LoginTest.test1">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
@@ -107,6 +124,8 @@
       <updated>1651232708679</updated>
       <workItem from="1651232713715" duration="1198000" />
       <workItem from="1651238035484" duration="10508000" />
+      <workItem from="1651539332675" duration="7981000" />
+      <workItem from="1651547956216" duration="665000" />
     </task>
     <servers />
   </component>

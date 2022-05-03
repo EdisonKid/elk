@@ -3,13 +3,21 @@
   <el-form :model="loginForm" :rules="rules" class="login-container" label-position="left"
            label-width="0px" v-loading="loading">
     <h3 class="login_title">系统登录</h3>
-    <el-form-item prop="username">
+<!--    <el-form-item prop="username">
       <el-input type="text" v-model="loginForm.username"
                 auto-complete="off" placeholder="账号"></el-input>
     </el-form-item>
     <el-form-item prop="password">
       <el-input type="password" v-model="loginForm.password"
                 auto-complete="off" placeholder="密码"></el-input>
+    </el-form-item>-->
+    <!-- 用户名 -->
+    <el-form-item prop="username">
+      <el-input v-model="sname" prefix-icon="el-icon-user"></el-input>
+    </el-form-item>
+    <!-- 密码 -->
+    <el-form-item prop="password">
+      <el-input v-model="spwd" prefix-icon="el-icon-lock" type="password"></el-input>
     </el-form-item>
     <el-checkbox class="login_remember" v-model="checked"
                  label-position="left"><span style="color: #505458">记住密码</span></el-checkbox>

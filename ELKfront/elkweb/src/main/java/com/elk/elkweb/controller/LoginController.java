@@ -22,7 +22,7 @@ public class LoginController {
     private LoginService loginService;
 
     @RequestMapping(value = "/login", produces = "application/json;charset=utf-8")
-    public List login(HttpServletRequest request, @RequestParam("usernam") String username, @RequestParam("password") String password) {
+    public List login(HttpServletRequest request, @RequestParam("USER_NAME") String username, @RequestParam("USER_NAME") String password) {
         int code = 404;
         boolean res = loginService.login(username, password);
         if (res) {

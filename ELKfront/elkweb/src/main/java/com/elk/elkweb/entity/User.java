@@ -5,49 +5,38 @@ package com.elk.elkweb.entity;
  * @create 2022-04-30 16:48
  */
 public class User {
-    int id;
-    String username;
-    String password;
+    String USER_NAME;
+    String USER_PSD;
 
-    public int getId() {
-        return id;
+    public String getUSER_NAME() {
+        return USER_NAME;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setUSER_NAME(String USER_NAME) {
+        this.USER_NAME = USER_NAME;
     }
 
-    public String getUsername() {
-        return username;
+    public String getUSER_PSD() {
+        return USER_PSD;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
+    public void setUSER_PSD(String USER_PSD) {
+        this.USER_PSD = USER_PSD;
     }
 
     public User() {
     }
 
-    public User(int id, String username, String password) {
-        this.id = id;
-        this.username = username;
-        this.password = password;
+    public User(String USER_NAME, String USER_PSD) {
+        this.USER_NAME = USER_NAME;
+        this.USER_PSD = USER_PSD;
     }
 
     @Override
     public String toString() {
         return "User{" +
-                "id=" + id +
-                ", username='" + username + '\'' +
-                ", password='" + password + '\'' +
+                "USER_NAME='" + USER_NAME + '\'' +
+                ", USER_PSD='" + USER_PSD + '\'' +
                 '}';
     }
 }

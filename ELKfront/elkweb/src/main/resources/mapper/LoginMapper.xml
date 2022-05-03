@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="Login">
+<mapper namespace="com.elk.elkweb.mapper.LoginMapper">
     <resultMap id="BaseResultMap" type="com.elk.elkweb.entity.User">
-        <id column="sno" jdbcType="INTEGER" property="sno" />
-        <result column="username" jdbcType="VARCHAR" property="username" />
-        <result column="password" jdbcType="VARCHAR" property="password" />
+        <result column="USER_NAME" jdbcType="VARCHAR" property="USER_NAME"/>
+        <result column="USER_PSD" jdbcType="VARCHAR" property="USER_PSD"/>
     </resultMap>
 
     <!--登陆验证-->
-    <select id="LoginMapper" parameterType="User" resultType="User">
-        select * from  T_USER_INFO where username=#{USER_NAME} and password=#{USER_PSD}
+    <select id="login" parameterType="com.elk.elkweb.entity.User" resultType="com.elk.elkweb.entity.User">
+        select *
+        from T_USER_INFO
+        where USER_NAME = #{USER_NAME}
+          and USER_PSD = #{USER_PSD}
     </select>
 
 </mapper>

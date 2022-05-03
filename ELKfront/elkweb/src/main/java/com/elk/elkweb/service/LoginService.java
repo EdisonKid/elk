@@ -1,7 +1,5 @@
 package com.elk.elkweb.service;
 
-import com.elk.elkweb.entity.User;
-import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Service;
 
 /**
@@ -11,5 +9,5 @@ import org.springframework.stereotype.Service;
 @Service
 public interface LoginService {
     // 登录验证
-    boolean login(String username,String password);
+    boolean login(String USER_NAME, String USER_PSD);
 }
