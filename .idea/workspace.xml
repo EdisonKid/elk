@@ -7,15 +7,9 @@
     <list default="true" id="041e2759-c1fb-4b78-be1e-8cdf78d32021" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ELKfront/elkweb/elkpro/src/components/login/login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/ELKfront/elkweb/elkpro/src/components/login/login.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ELKfront/elkweb/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ELKfront/elkweb/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ELKfront/elkweb/elkpro/src/components/login/login1.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ELKfront/elkweb/elkpro/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/ELKfront/elkweb/elkpro/src/router/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ELKfront/elkweb/src/main/java/com/elk/elkweb/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ELKfront/elkweb/src/main/java/com/elk/elkweb/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ELKfront/elkweb/src/main/java/com/elk/elkweb/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/ELKfront/elkweb/src/main/java/com/elk/elkweb/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ELKfront/elkweb/src/main/java/com/elk/elkweb/mapper/LoginMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ELKfront/elkweb/src/main/java/com/elk/elkweb/mapper/LoginMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ELKfront/elkweb/src/main/java/com/elk/elkweb/service/LoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ELKfront/elkweb/src/main/java/com/elk/elkweb/service/LoginService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ELKfront/elkweb/src/main/java/com/elk/elkweb/service/LoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ELKfront/elkweb/src/main/java/com/elk/elkweb/service/LoginServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ELKfront/elkweb/src/main/java/com/elk/elkweb/test/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ELKfront/elkweb/src/main/java/com/elk/elkweb/test/LoginTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ELKfront/elkweb/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ELKfront/elkweb/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ELKfront/elkweb/src/main/resources/mapper/LoginMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ELKfront/elkweb/src/main/resources/mapper/LoginMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,18 +67,7 @@
       <recent name="D:\program\workspace\workspace-idea\07ELK\ELKWeb - pagination\elk\ELKfront\elkweb\src\main\java\com\elk\elkweb\controller" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.LoginTest.test1">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Spring Boot.ElkwebApplication">
     <configuration name="LoginTest.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="elkweb" />
       <extension name="coverage">
@@ -125,12 +108,26 @@
       <workItem from="1651232713715" duration="1198000" />
       <workItem from="1651238035484" duration="10508000" />
       <workItem from="1651539332675" duration="7981000" />
-      <workItem from="1651547956216" duration="665000" />
+      <workItem from="1651547956216" duration="3581000" />
+      <workItem from="1651554336247" duration="1377000" />
+      <workItem from="1651558626762" duration="630000" />
     </task>
+    <task id="LOCAL-00001" summary="login">
+      <created>1651548730568</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1651548730568</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="login" />
+    <option name="LAST_COMMIT_MESSAGE" value="login" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -49,6 +49,7 @@ const routes = [
     {path: '/test2', name: 'test2', component: test2},
     {path: '/css', name: 'css', component: css},
     {path: '/', name: 'login', component: login},
+    {path: '/index', name: 'index', component: index},
     {path: '/home', name: 'home', component: home,
         children: [
             {path: '/firewallInfo', name: 'firewallInfo', component: firewallInfo},
